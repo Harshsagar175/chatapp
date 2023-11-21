@@ -11,6 +11,12 @@ const db = getFirestore(app);
 const loginHandler = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth , provider)
+    .then((data)=>{
+      console.log(data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
 }
 
 
